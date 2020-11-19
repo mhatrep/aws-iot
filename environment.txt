@@ -7,3 +7,14 @@ cp exercise-1.1.js car2/
 rm exercise-1.1.js
 cd ~/environment
 wget -O root-CA.crt https://www.amazontrust.com/repository/AmazonRootCA1.pem
+-----------------------------------------------------
+
+cd ~/environment/car2
+aws iot create-thing --thing-name car2
+aws iot create-keys-and-certificate --set-as-active --certificate-pem-outfile certificate.pem.crt --private-key-outfile private.pem.key
+aws iot attach-policy --policy-name labPolicy --target certificateArn_changeme
+aws iot attach-thing-principal --thing-name car2 --principal certificateArn_changeme
+-----------------------------------------------------
+aws iot describe-endpoint --endpoint-type iot:Data-ATS > ~/environment/endpoint.json
+cd ~/environment/car1
+node exercise-1.1.js
