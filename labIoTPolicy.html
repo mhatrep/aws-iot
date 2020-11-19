@@ -1,0 +1,137 @@
+<style>
+    body {
+        font-family: arial;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    table {
+        font-size: 8pt;
+        border-top: black 1px solid;
+        border-right: black 1px solid;
+        /* border-spacing : 10px */
+        border-collapse: collapse;
+    }
+
+    td,
+    th {
+        text-align: left;
+        vertical-align: top;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        border-left: black 1px solid;
+        border-bottom: black 1px solid;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    th {
+        background-color: #aaaaaa;
+    }
+
+    td.number {
+        color: blue
+    }
+
+    td.boolean {
+        color: green;
+        font-style: italic;
+    }
+
+    td.date {
+        color: purple;
+    }
+
+    td.null:after {
+        color: gray;
+        font-style: italic;
+        content: null;
+    }
+</style>
+<table>
+    <tr>
+        <th class="string">Version</th>
+        <td class="string">2012-10-17</td>
+    </tr>
+    <tr>
+        <th class="array">Statement</th>
+        <td class="array">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="string">Effect</th>
+                        <th class="array">Action</th>
+                        <th class="string">Resource</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="string">Allow</td>
+                        <td class="array">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td class="string">greengrass:*</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="string">iot:*</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="string">iotanalytics:*</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="string">cloud9:*</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="string">lambda:*</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="string">s3:*</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="string">sns:*</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="string">iam:*</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="string">cognito-identity:*</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="string">cognito-sync:*</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="string">cognito-idp:*</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="string">logs:*</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="string">ec2:*</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="string">cloudwatch:*</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="string">kms:ListAliases</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="string">kms:DescribeKey</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="string">cloudformation:DescribeStackResources</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="string">tag:getResources</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="string">*</td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+</table>
