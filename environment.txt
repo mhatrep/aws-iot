@@ -1,0 +1,9 @@
+npm install aws-iot-device-sdk
+mkdir ~/environment/car1; mkdir ~/environment/car2
+cd ~/environment
+wget https://aws-tc-largeobjects.s3.amazonaws.com/OTP-AWS_D5-2019/v1.0/code/exercise-1.1.js
+cp exercise-1.1.js car1/
+cp exercise-1.1.js car2/
+rm exercise-1.1.js
+cd ~/environment
+wget -O root-CA.crt https://www.amazontrust.com/repository/AmazonRootCA1.pem
